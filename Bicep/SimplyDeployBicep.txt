@@ -1,0 +1,2 @@
+az group create --name exampleRG
+az deployment group create --resource-group exampleRG --template-file FirstVerySimpleBicepScript.bicep --parameters storageName=setuniquenamehere
