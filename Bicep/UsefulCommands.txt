@@ -14,3 +14,12 @@ az deployment group create \
 az group export --name "your_resource_group_name" > main.json
 az bicep decompile --file main.json
 https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/decompile?tabs=azure-cli
+
+
+--Set de default resource group
+az configure --defaults group=learn-778e388c-f0a1-4d06-8fb4-8000828e9a54
+
+--Use paramter files at deployment time
+az deployment group create \
+  --template-file main.bicep \
+  --parameters main.parameters.json
