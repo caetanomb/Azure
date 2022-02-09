@@ -23,3 +23,9 @@ az configure --defaults group=learn-778e388c-f0a1-4d06-8fb4-8000828e9a54
 az deployment group create \
   --template-file main.bicep \
   --parameters main.parameters.json
+
+--Parameter files override default values, and command-line parameter values override parameter files.
+  az deployment group create \
+  --template-file main.bicep \
+  --parameters main.parameters.json \
+               appServicePlanInstanceCount=5

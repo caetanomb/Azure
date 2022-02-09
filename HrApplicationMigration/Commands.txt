@@ -6,3 +6,6 @@ password='YOUR-PASSWORD' # The password that you used in the previous step.
 az keyvault create --name $keyVaultName --location westus --enabled-for-template-deployment true
 az keyvault secret set --vault-name $keyVaultName --name "sqlServerAdministratorLogin" --value $login
 az keyvault secret set --vault-name $keyVaultName --name "sqlServerAdministratorPassword" --value $password
+
+--Get the key vault's resource ID
+az keyvault show --name $keyVaultName --query id --output tsv
