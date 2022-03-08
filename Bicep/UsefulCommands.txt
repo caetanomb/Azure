@@ -11,6 +11,8 @@ az deployment group create \
   --template-file main.bicep \
   --parameters environmentType=nonprod
 
+  az deployment group what-if --resource-group MoveBlobToFileRG --template-file .\main.bicep
+
 az group export --name "your_resource_group_name" > main.json
 az bicep decompile --file main.json
 https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/decompile?tabs=azure-cli
