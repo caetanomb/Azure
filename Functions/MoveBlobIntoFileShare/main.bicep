@@ -10,7 +10,7 @@ var storageAccountName = format('{0}sta', toLower(replace(functionName, '-', '')
 resource hostingPlan 'Microsoft.Web/serverfarms@2021-03-01' = {
   name: functionAppHostingPlanName
   location: location
-  kind: 'linux'
+  kind: 'Linux'
   sku: {
     name: 'Y1'
     tier: 'Dynamic'

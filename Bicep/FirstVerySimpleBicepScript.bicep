@@ -37,3 +37,5 @@ resource exampleStorage 'Microsoft.Storage/storageAccounts@2021-02-01' = {
   }
   kind: 'StorageV2'
 }
+
+output endpoint object = exampleStorage.properties
